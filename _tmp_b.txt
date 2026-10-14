@@ -1,0 +1,402 @@
+﻿
+­ƒº¬ Seeding test template
+­ƒº¬ Ready: 8 isolated databases (9 stale file(s) cleared)
+  console.log
+    Ô£à Connected to SQLite database
+
+      at Database.log (src/models/database.js:17:13)
+
+  console.log
+    Ô£à Database indexes created
+
+      at log (src/models/database.js:538:11)
+
+  console.log
+    Ô£à Database tables initialized
+
+      at Database.log (src/models/database.js:475:13)
+
+  console.error
+    Error: AppError: This submodule is already paid
+        at Function.settleSubmodule (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\services\PaymentService.js:171:13)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\services\PaymentService.js:71:28
+        at runInTransaction (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\utils\dbHelpers.js:62:19) {
+      statusCode: 409,
+      code: 'ALREADY_PAID',
+      isOperational: true
+    }
+
+    [0m [90m 2 |[39m
+     [90m 3 |[39m [36mconst[39m errorHandler [33m=[39m (err[33m,[39m req[33m,[39m res[33m,[39m next) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 4 |[39m   console[33m.[39merror([32m'Error:'[39m[33m,[39m err)[33m;[39m
+     [90m   |[39m           [31m[1m^[22m[39m
+     [90m 5 |[39m
+     [90m 6 |[39m   [90m// Default error[39m
+     [90m 7 |[39m   [36mlet[39m statusCode [33m=[39m err[33m.[39mstatusCode [33m||[39m [35m500[39m[33m;[39m[0m
+
+      at error (src/middleware/errorHandler.js:4:11)
+      at Layer.handle_error (node_modules/express/lib/router/layer.js:71:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:326:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at Layer.handle_error (node_modules/express/lib/router/layer.js:67:12)
+      at trim_prefix (node_modules/express/lib/router/index.js:326:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express/lib/router/index.js:646:15
+      at next (node_modules/express/lib/router/index.js:265:14)
+      at next (node_modules/express/lib/router/route.js:141:14)
+      at FinanceController.next [as recordPayment] (src/controllers/FinanceController.js:33:7)
+
+  console.error
+    Error: AppError: A whole-module discount is only available when no submodule is already paid
+        at Function.settleModule (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\services\PaymentService.js:138:13)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\services\PaymentService.js:64:37
+        at runInTransaction (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\utils\dbHelpers.js:62:19) {
+      statusCode: 409,
+      code: 'MODULE_NOT_CLEAN',
+      isOperational: true
+    }
+
+    [0m [90m 2 |[39m
+     [90m 3 |[39m [36mconst[39m errorHandler [33m=[39m (err[33m,[39m req[33m,[39m res[33m,[39m next) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 4 |[39m   console[33m.[39merror([32m'Error:'[39m[33m,[39m err)[33m;[39m
+     [90m   |[39m           [31m[1m^[22m[39m
+     [90m 5 |[39m
+     [90m 6 |[39m   [90m// Default error[39m
+     [90m 7 |[39m   [36mlet[39m statusCode [33m=[39m err[33m.[39mstatusCode [33m||[39m [35m500[39m[33m;[39m[0m
+
+      at error (src/middleware/errorHandler.js:4:11)
+      at Layer.handle_error (node_modules/express/lib/router/layer.js:71:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:326:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at Layer.handle_error (node_modules/express/lib/router/layer.js:67:12)
+      at trim_prefix (node_modules/express/lib/router/index.js:326:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express/lib/router/index.js:646:15
+      at next (node_modules/express/lib/router/index.js:265:14)
+      at next (node_modules/express/lib/router/route.js:141:14)
+      at FinanceController.next [as recordPayment] (src/controllers/FinanceController.js:33:7)
+
+  console.error
+    Error: AppError: "items" must contain at least 1 items
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\middleware\validate.js:59:13
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\route.js:149:13)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\middleware\auth.js:25:5)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\route.js:149:13)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\middleware\auth.js:16:5)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\jsonwebtoken\verify.js:261:12
+        at getSecret (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\jsonwebtoken\verify.js:97:14)
+        at Object.module.exports [as verify] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\jsonwebtoken\verify.js:101:10)
+        at verify (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\middleware\auth.js:11:7)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\route.js:149:13)
+        at Route.dispatch (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\route.js:119:3)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:284:15
+        at param (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:365:14)
+        at param (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:376:14)
+        at Function.process_params (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:421:3)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:280:10)
+        at Function.handle (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:175:3)
+        at router (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:47:12)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at trim_prefix (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:328:13)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:286:9
+        at Function.process_params (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:346:12)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:280:10)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:646:15
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:265:14)
+        at Function.handle (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:175:3)
+        at router (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:47:12)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at trim_prefix (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:328:13)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:286:9
+        at Function.process_params (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:346:12)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:280:10)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:646:15
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:265:14)
+        at Function.handle (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:175:3)
+        at router (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:47:12)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at trim_prefix (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:328:13)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:286:9
+        at Function.process_params (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:346:12)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:280:10)
+        at urlencodedParser (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\body-parser\lib\types\urlencoded.js:86:7)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at trim_prefix (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:328:13)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:286:9
+        at Function.process_params (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:346:12)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:280:10)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\body-parser\lib\read.js:137:5
+        at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+        at invokeCallback (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\raw-body\index.js:238:16)
+        at done (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\raw-body\index.js:227:7)
+        at IncomingMessage.onEnd (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\raw-body\index.js:287:7)
+        at IncomingMessage.emit (node:events:519:28)
+        at endReadableNT (node:internal/streams/readable:1698:12)
+        at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      statusCode: 400,
+      code: 'VALIDATION_ERROR',
+      isOperational: true
+    }
+
+    [0m [90m 2 |[39m
+     [90m 3 |[39m [36mconst[39m errorHandler [33m=[39m (err[33m,[39m req[33m,[39m res[33m,[39m next) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 4 |[39m   console[33m.[39merror([32m'Error:'[39m[33m,[39m err)[33m;[39m
+     [90m   |[39m           [31m[1m^[22m[39m
+     [90m 5 |[39m
+     [90m 6 |[39m   [90m// Default error[39m
+     [90m 7 |[39m   [36mlet[39m statusCode [33m=[39m err[33m.[39mstatusCode [33m||[39m [35m500[39m[33m;[39m[0m
+
+      at error (src/middleware/errorHandler.js:4:11)
+      at Layer.handle_error (node_modules/express/lib/router/layer.js:71:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:326:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at Layer.handle_error (node_modules/express/lib/router/layer.js:67:12)
+      at trim_prefix (node_modules/express/lib/router/index.js:326:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express/lib/router/index.js:646:15
+      at next (node_modules/express/lib/router/index.js:265:14)
+      at next (node_modules/express/lib/router/route.js:141:14)
+      at Layer.handle_error (node_modules/express/lib/router/layer.js:67:12)
+      at next (node_modules/express/lib/router/route.js:147:13)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:97:5)
+      at next (node_modules/express/lib/router/route.js:149:13)
+      at next (src/middleware/auth.js:25:5)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at next (node_modules/express/lib/router/route.js:149:13)
+      at next (src/middleware/auth.js:16:5)
+      at node_modules/jsonwebtoken/verify.js:261:12
+      at getSecret (node_modules/jsonwebtoken/verify.js:97:14)
+      at Object.module.exports [as verify] (node_modules/jsonwebtoken/verify.js:101:10)
+      at verify (src/middleware/auth.js:11:7)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at next (node_modules/express/lib/router/route.js:149:13)
+      at Route.dispatch (node_modules/express/lib/router/route.js:119:3)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at node_modules/express/lib/router/index.js:284:15
+      at param (node_modules/express/lib/router/index.js:365:14)
+      at param (node_modules/express/lib/router/index.js:376:14)
+      at Function.process_params (node_modules/express/lib/router/index.js:421:3)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at Function.handle (node_modules/express/lib/router/index.js:175:3)
+      at router (node_modules/express/lib/router/index.js:47:12)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express/lib/router/index.js:646:15
+      at next (node_modules/express/lib/router/index.js:265:14)
+      at Function.handle (node_modules/express/lib/router/index.js:175:3)
+      at router (node_modules/express/lib/router/index.js:47:12)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express/lib/router/index.js:646:15
+      at next (node_modules/express/lib/router/index.js:265:14)
+      at Function.handle (node_modules/express/lib/router/index.js:175:3)
+      at router (node_modules/express/lib/router/index.js:47:12)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at urlencodedParser (node_modules/body-parser/lib/types/urlencoded.js:86:7)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/body-parser/lib/read.js:137:5
+      at invokeCallback (node_modules/raw-body/index.js:238:16)
+      at done (node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (node_modules/raw-body/index.js:287:7)
+
+  console.error
+    Error: AppError: "method" must be one of [cash, card, transfer, check, other]
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\middleware\validate.js:59:13
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\route.js:149:13)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\middleware\auth.js:25:5)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\route.js:149:13)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\middleware\auth.js:16:5)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\jsonwebtoken\verify.js:261:12
+        at getSecret (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\jsonwebtoken\verify.js:97:14)
+        at Object.module.exports [as verify] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\jsonwebtoken\verify.js:101:10)
+        at verify (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\src\middleware\auth.js:11:7)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\route.js:149:13)
+        at Route.dispatch (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\route.js:119:3)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:284:15
+        at param (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:365:14)
+        at param (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:376:14)
+        at Function.process_params (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:421:3)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:280:10)
+        at Function.handle (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:175:3)
+        at router (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:47:12)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at trim_prefix (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:328:13)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:286:9
+        at Function.process_params (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:346:12)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:280:10)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:646:15
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:265:14)
+        at Function.handle (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:175:3)
+        at router (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:47:12)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at trim_prefix (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:328:13)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:286:9
+        at Function.process_params (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:346:12)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:280:10)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:646:15
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:265:14)
+        at Function.handle (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:175:3)
+        at router (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:47:12)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at trim_prefix (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:328:13)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:286:9
+        at Function.process_params (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:346:12)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:280:10)
+        at urlencodedParser (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\body-parser\lib\types\urlencoded.js:86:7)
+        at Layer.handle [as handle_request] (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\layer.js:95:5)
+        at trim_prefix (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:328:13)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:286:9
+        at Function.process_params (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:346:12)
+        at next (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\express\lib\router\index.js:280:10)
+        at C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\body-parser\lib\read.js:137:5
+        at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+        at invokeCallback (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\raw-body\index.js:238:16)
+        at done (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\raw-body\index.js:227:7)
+        at IncomingMessage.onEnd (C:\Users\Mouhamed aziz\OneDrive\Bureau\agence de langue\backend\node_modules\raw-body\index.js:287:7)
+        at IncomingMessage.emit (node:events:519:28)
+        at endReadableNT (node:internal/streams/readable:1698:12)
+        at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      statusCode: 400,
+      code: 'VALIDATION_ERROR',
+      isOperational: true
+    }
+
+    [0m [90m 2 |[39m
+     [90m 3 |[39m [36mconst[39m errorHandler [33m=[39m (err[33m,[39m req[33m,[39m res[33m,[39m next) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 4 |[39m   console[33m.[39merror([32m'Error:'[39m[33m,[39m err)[33m;[39m
+     [90m   |[39m           [31m[1m^[22m[39m
+     [90m 5 |[39m
+     [90m 6 |[39m   [90m// Default error[39m
+     [90m 7 |[39m   [36mlet[39m statusCode [33m=[39m err[33m.[39mstatusCode [33m||[39m [35m500[39m[33m;[39m[0m
+
+      at error (src/middleware/errorHandler.js:4:11)
+      at Layer.handle_error (node_modules/express/lib/router/layer.js:71:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:326:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at Layer.handle_error (node_modules/express/lib/router/layer.js:67:12)
+      at trim_prefix (node_modules/express/lib/router/index.js:326:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express/lib/router/index.js:646:15
+      at next (node_modules/express/lib/router/index.js:265:14)
+      at next (node_modules/express/lib/router/route.js:141:14)
+      at Layer.handle_error (node_modules/express/lib/router/layer.js:67:12)
+      at next (node_modules/express/lib/router/route.js:147:13)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:97:5)
+      at next (node_modules/express/lib/router/route.js:149:13)
+      at next (src/middleware/auth.js:25:5)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at next (node_modules/express/lib/router/route.js:149:13)
+      at next (src/middleware/auth.js:16:5)
+      at node_modules/jsonwebtoken/verify.js:261:12
+      at getSecret (node_modules/jsonwebtoken/verify.js:97:14)
+      at Object.module.exports [as verify] (node_modules/jsonwebtoken/verify.js:101:10)
+      at verify (src/middleware/auth.js:11:7)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at next (node_modules/express/lib/router/route.js:149:13)
+      at Route.dispatch (node_modules/express/lib/router/route.js:119:3)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at node_modules/express/lib/router/index.js:284:15
+      at param (node_modules/express/lib/router/index.js:365:14)
+      at param (node_modules/express/lib/router/index.js:376:14)
+      at Function.process_params (node_modules/express/lib/router/index.js:421:3)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at Function.handle (node_modules/express/lib/router/index.js:175:3)
+      at router (node_modules/express/lib/router/index.js:47:12)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express/lib/router/index.js:646:15
+      at next (node_modules/express/lib/router/index.js:265:14)
+      at Function.handle (node_modules/express/lib/router/index.js:175:3)
+      at router (node_modules/express/lib/router/index.js:47:12)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/express/lib/router/index.js:646:15
+      at next (node_modules/express/lib/router/index.js:265:14)
+      at Function.handle (node_modules/express/lib/router/index.js:175:3)
+      at router (node_modules/express/lib/router/index.js:47:12)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at urlencodedParser (node_modules/body-parser/lib/types/urlencoded.js:86:7)
+      at Layer.handle [as handle_request] (node_modules/express/lib/router/layer.js:95:5)
+      at trim_prefix (node_modules/express/lib/router/index.js:328:13)
+      at node_modules/express/lib/router/index.js:286:9
+      at Function.process_params (node_modules/express/lib/router/index.js:346:12)
+      at next (node_modules/express/lib/router/index.js:280:10)
+      at node_modules/body-parser/lib/read.js:137:5
+      at invokeCallback (node_modules/raw-body/index.js:238:16)
+      at done (node_modules/raw-body/index.js:227:7)
+      at IncomingMessage.onEnd (node_modules/raw-body/index.js:287:7)
+
+node : PASS tests/integration/payments.test.js
+Au caractère Ligne:1 : 13
++ cd backend; node node_modules/jest/bin/jest.js tests/integration/paym ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (PASS tests/integration/payments.test.js:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Payments & allocations
+    ÔêÜ pays one submodule in full (151 ms)
+    ÔêÜ refuses to pay an already-paid submodule again (145 ms)
+    ÔêÜ settles a clean module with a discount distributed over its submodules (127 ms)
+    ÔêÜ refuses a whole-module discount once a submodule is already paid (129 ms)
+    ÔêÜ lets a dirty module be settled in full at the full price (no discount) (147 ms)
+    ÔêÜ records several modules, each with its own percent, in one payment (143 ms)
+    ÔêÜ voids a payment and restores the balance (154 ms)
+    ÔêÜ rejects an empty item list (110 ms)
+    ÔêÜ rejects an invalid method (119 ms)
+    ÔêÜ requires a token to record a payment (82 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        2.652 s, estimated 16 s
+Ran all test suites matching tests/integration/payments.test.js.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after 
+all tests finished?

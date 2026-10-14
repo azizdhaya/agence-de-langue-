@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM Centre de Langues — Synthèse de validation</title>
+<style>
+  :root {
+    --primary: #1d4ed8;
+    --green: #047857;
+    --green-bg: #ecfdf5;
+    --gray-bg: #f3f4f6;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, Helvetica, sans-serif; color: var(--text); margin: 0; background: #fff; }
+  .page { max-width: 210mm; margin: 0 auto; padding: 18mm 16mm; }
+  header { border-bottom: 3px solid var(--primary); padding-bottom: 12px; margin-bottom: 18px; }
+  header h1 { font-size: 24px; margin: 0 0 4px 0; color: var(--primary); }
+  header p { margin: 2px 0; color: var(--muted); font-size: 13px; }
+  h2 { font-size: 17px; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 4px; margin: 22px 0 10px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 8px 0; }
+  th, td { border: 1px solid var(--border); padding: 7px 9px; text-align: left; vertical-align: top; }
+  th { background: var(--gray-bg); }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: bold; }
+  .ok { background: var(--green-bg); color: var(--green); }
+  .num { font-size: 26px; font-weight: bold; color: var(--primary); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 10px 0; }
+  .kpi { border: 1px solid var(--border); border-radius: 8px; padding: 12px; text-align: center; }
+  .kpi small { color: var(--muted); font-size: 12px; }
+  ul { font-size: 13px; line-height: 1.65; }
+  footer { margin-top: 24px; border-top: 1px solid var(--border); padding-top: 8px; font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; }
+  .toolbar { text-align: right; padding: 10px 0; }
+  .toolbar button { background: var(--primary); color: #fff; border: 0; border-radius: 6px; padding: 9px 18px; font-size: 14px; cursor: pointer; }
+  @media print {
+    .toolbar { display: none; }
+    .page { padding: 0; max-width: none; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="toolbar"><button onclick="window.print()">Imprimer / Exporter en PDF</button></div>
+
+  <header>
+    <h1>CRM Centre de Langues — Synthèse de validation</h1>
+    <p>Audit fonctionnel, technique et sécurité — vérifications réellement exécutées le 11/10/2026</p>
+    <p>Dossier complet : <strong>docs/qa-final/</strong> (audit, résultats, checklist, guide démo, correctifs)</p>
+    <p style="color:#b45309"><strong>Mise à jour 13/10/2026 :</strong> le module financier (factures,
+    paiements, reçus, impayés, rapports et paramètres financiers, catalogue de tarifs,
+    multi-devises) a été retiré du backend et du frontend, et ses tables ont été supprimées.
+    Il sera reconstruit ultérieurement. Les éléments financiers ci-dessous sont conservés à
+    titre d'archive de la validation précédente.</p>
+  </header>
+
+  <h2>1. Résultats vérifiés</h2>
+  <div class="grid">
+    <div class="kpi"><div class="num">359</div><small>tests backend réussis<br>(34 suites, 0 échec)</small></div>
+    <div class="kpi"><div class="num">128</div><small>tests frontend réussis<br>(14 fichiers, 0 échec)</small></div>
+    <div class="kpi"><div class="num">0</div><small>table financière restante<br>(migration 020 appliquée)</small></div>
+  </div>
+  <table>
+    <tr><th>Contrôle</th><th>Résultat</th></tr>
+    <tr><td>Tests automatisés (0 test ignoré ou désactivé)</td><td><span class="badge ok">PASS</span></td></tr>
+    <tr><td>Compilation de l'application (build)</td><td><span class="badge ok">PASS</span></td></tr>
+    <tr><td>Base de données : migrations 002→020, intégrité des liens</td><td><span class="badge ok">PASS</span></td></tr>
+    <tr><td>Retrait financier : 0 table facture/paiement/reçu/tarif/devise, routes 404</td><td><span class="badge ok">PASS</span></td></tr>
+    <tr><td>Droits d'accès par rôle, vérifiés côté serveur</td><td><span class="badge ok">PASS</span></td></tr>
+  </table>
+
+  <h2>2. Modules livrés</h2>
+  <table>
+    <tr><th>Pôle</th><th>Fonctionnalités</th></tr>
+    <tr><td><strong>Pédagogie</strong></td><td>Candidats, professeurs, cours, groupes (avec affectation des candidats), sessions, présences, notes, niveaux CECRL A1.1 → C2.2, certificats vérifiables</td></tr>
+    <tr><td><strong>Communication</strong></td><td>Messages temps réel, annonces ciblées, notifications avec accusé de lecture</td></tr>
+    <tr><td><strong>Documents</strong></td><td>Certificats et dossiers</td></tr>
+    <tr><td><strong>Finance</strong></td><td><em>Retiré le 13/10/2026</em> — à reconstruire (l'ancien périmètre : factures, paiements, reçus, impayés, rapports, paramètres, tarifs, remises, devises)</td></tr>
+  </table>
+
+  <h2>3. Sécurité et fiabilité</h2>
+  <ul>
+    <li>Création de comptes réservée à l'administrateur, avec contrôle des rôles.</li>
+    <li>Mots de passe chiffrés, jamais exposés ; sessions par jeton avec déconnexion propre.</li>
+    <li>Chaque rôle ne voit que ses données (vérifié par tests d'intrusion entre comptes).</li>
+    <li>Tables financières supprimées de la base (migration 020) ; plus aucune route financière exposée.</li>
+    <li>Table d'audit conservée ; l'écriture d'audit applicative reviendra avec le module à reconstruire.</li>
+    <li>Sauvegardes : procédure de secours documentée dans le guide de démonstration.</li>
+  </ul>
+
+  <h2>4. Démonstration (15 minutes)</h2>
+  <ul>
+    <li>Connexion administrateur, paramètres du centre.</li>
+    <li>Création d'un candidat, inscription à un cours, affectation au groupe.</li>
+    <li>Présences, note et moyenne.</li>
+    <li>Annonces, messages temps réel et notifications.</li>
+    <li>Vérification de la suppression du module financier (menus et routes absents).</li>
+  </ul>
+  <p style="font-size:13px;color:var(--muted)">Procédure de démarrage détaillée : <strong>docs/qa-final/DEMO_GUIDE.md</strong></p>
+
+  <footer>
+    <span>Document généré le 11/10/2026, mis à jour le 13/10/2026 (retrait du module financier) à partir de vérifications exécutées (non déclaratives).</span>
+    <span>Page 1/1</span>
+  </footer>
+</div>
+</body>
+</html>

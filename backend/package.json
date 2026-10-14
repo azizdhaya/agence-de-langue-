@@ -1,0 +1,51 @@
+{
+  "name": "language-center-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Language Center Management Platform",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "seed": "node src/utils/seed.js",
+    "test": "jest --forceExit",
+    "test:unit": "jest tests/unit --forceExit",
+    "test:integration": "jest tests/integration --forceExit",
+    "test:coverage": "jest --coverage --forceExit",
+    "migrate": "node src/utils/migrate.js",
+    "db:reset": "node src/utils/reset-db.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "joi": "^18.2.9",
+    "jsonwebtoken": "^9.0.2",
+    "socket.io": "^4.7.2",
+    "sqlite3": "^5.1.6",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "nodemon": "^3.0.1",
+    "supertest": "^7.3.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/tests/setup/env.js"
+    ],
+    "globalSetup": "<rootDir>/tests/setup/globalSetup.js",
+    "maxWorkers": 4,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js",
+      "!src/utils/seed.js"
+    ]
+  }
+}

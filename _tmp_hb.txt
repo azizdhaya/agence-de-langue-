@@ -1,0 +1,41 @@
+﻿
+­ƒº¬ Seeding test template
+­ƒº¬ Ready: 8 isolated databases (9 stale file(s) cleared)
+  console.log
+    Ô£à Connected to SQLite database
+
+      at Database.log (src/models/database.js:17:13)
+
+  console.log
+    Ô£à Database indexes created
+
+      at log (src/models/database.js:538:11)
+
+  console.log
+    Ô£à Database tables initialized
+
+      at Database.log (src/models/database.js:475:13)
+
+node : PASS tests/integration/finance-hardblock.test.js
+Au caractère Ligne:1 : 13
++ cd backend; node node_modules/jest/bin/jest.js tests/integration/fina ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (PASS tests/inte...rdblock.test.js:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Finance hard block & receipts (P3)
+    ÔêÜ snapshots a registration due date on the charge (4 ms)
+    ÔêÜ reports the unpaid student on the s├®ance roster (296 ms)
+    ÔêÜ refuses a single attendance row while the submodule is unpaid (10 ms)
+    ÔêÜ refuses a whole batch written while the submodule is unpaid (11 ms)
+    ÔêÜ opens the receipt with the student and the allocated lines (24 ms)
+    ÔêÜ allows attendance once the submodule is paid (18 ms)
+    ÔêÜ does not block attendance when the s├®ance teaches no submodule (125 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        1.944 s, estimated 3 s
+Ran all test suites matching tests/integration/finance-hardblock.test.js.
+Force exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after 
+all tests finished?

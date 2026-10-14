@@ -1,0 +1,38 @@
+﻿
+[1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90mC:/Users/Mouhamed aziz/OneDrive/Bureau/agence de langue/frontend[39m
+
+node : [90mstderr[2m | src/test/receipt.test.jsx[2m > [22m[2mPayment receipt[2m > [22m[2mrenders the receipt 
+with its allocated lines and total
+Au caractère Ligne:1 : 14
++ ... d frontend; node node_modules/vitest/vitest.mjs run src/test/attendan ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([90mstderr[2m...lines and total:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[22m[39mÔÜá´©Å React Router Future Flag Warning: React Router will begin wrapping state updates in 
+`React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, 
+see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+ÔÜá´©Å React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use 
+the `v7_relativeSplatPath` future flag to opt-in early. For more information, see 
+https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ [32mÔ£ô[39m src/test/receipt.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[90m 272[2mms[22m[39m
+[90mstderr[2m | src/test/payments.test.jsx[2m > [22m[2mStudent payments[2m > [22m[2mrecords a single submodule 
+payment in full
+[22m[39mÔÜá´©Å React Router Future Flag Warning: React Router will begin wrapping state updates in 
+`React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, 
+see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+ÔÜá´©Å React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use 
+the `v7_relativeSplatPath` future flag to opt-in early. For more information, see 
+https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+ [32mÔ£ô[39m src/test/attendance.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 819[2mms[22m[39m
+   [33m[2mÔ£ô[22m[39m Attendance ÔÇö unpaid submodule lock[2m > [22mlocks the rows of students who still owe the s├®ance submodule [33m334[2mms[22m[39m
+ [32mÔ£ô[39m src/test/payments.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1320[2mms[22m[39m
+   [33m[2mÔ£ô[22m[39m Student payments[2m > [22mrecords a single submodule payment in full [33m484[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m10 passed[39m[22m[90m (10)[39m
+[2m   Start at [22m 15:41:47
+[2m   Duration [22m 30.76s[2m (transform 698ms, setup 13.94s, collect 4.82s, tests 2.41s, environment 63.20s, prepare 2.67s)[22m
+
